@@ -1,6 +1,6 @@
 """Read customer data from file and run a raffle."""
 
-from random import choice
+import random
 
 
 class Customer:
@@ -55,3 +55,19 @@ def run_raffle():
 
     customers = get_customers_from_file("customers.txt")
     pick_winner(customers)
+
+
+# The code below is a common Python idiom. It checks whether the 
+# Python script is being run as the main program or if it is being imported 
+# as a module into another script. The special variable __name__ is a built-in variable in 
+# Python, and when the script is executed, __name__ is set to "__main__" if the script is 
+# the main program being run. If the script is imported as a module, __name__ is set to 
+# the name of the module. Therefore, this condition ensures that the code block underneath 
+# it will only be executed if the script is the main program.
+if __name__ == "__main__":
+    run_raffle() # If the condition if __name__ == "__main__": is true 
+                 # (meaning the script is the main program), the function run_raffle() is called. 
+                 # This is where the main logic or functionality of the script is expected to be defined. 
+                 # The run_raffle() function will contain the code that should be executed when 
+                 # the script is run.
+
